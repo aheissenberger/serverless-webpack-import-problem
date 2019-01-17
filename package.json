@@ -18,7 +18,9 @@
   },
   "scripts": {
     "build": "sls webpack",
-    "offline": "sls offline start"
+    "offline": "sls offline start",
+    "test-ok":"sls invoke local -f works -d '{\"pathParameters\":{\"cmd\":\"hallo\"}}'",
+    "test-fails":"sls invoke local -f fails -d '{\"pathParameters\":{\"cmd\":\"hallo\"}}'"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0"
